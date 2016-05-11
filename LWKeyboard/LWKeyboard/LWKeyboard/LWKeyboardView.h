@@ -10,4 +10,6 @@
 
 @interface LWKeyboardView : UIView
 
+- (id)initWithFrame:(CGRect)frame funcIconArr:(NSArray *)funcIconArr;
+
 @end

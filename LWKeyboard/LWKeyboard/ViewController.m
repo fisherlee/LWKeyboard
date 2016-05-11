@@ -38,8 +38,8 @@
     
     kbh = 36.f;
     kby = height - kbh;
-    _keyboardView = [[LWKeyboardView alloc] initWithFrame:CGRectMake(0, kby, width, kbh)];
-    _keyboardView.backgroundColor = [UIColor colorWithRed:238.f/255.f green:238.f/255.f blue:240.f/255.f alpha:1.f];
+    _keyboardView = [[LWKeyboardView alloc] initWithFrame:CGRectMake(0, kby, width, kbh)
+                                              funcIconArr:nil];
     [self.view addSubview:_keyboardView];
 }
 

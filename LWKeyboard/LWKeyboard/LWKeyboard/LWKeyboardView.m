@@ -10,10 +10,14 @@
 
 @implementation LWKeyboardView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame funcIconArr:(NSArray *)funcIconArr
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        self.backgroundColor = [UIColor colorWithRed:238.f/255.f green:238.f/255.f blue:240.f/255.f alpha:1.f];
+
+        
         UIView *topHline = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 1.f)];
         topHline.backgroundColor = [UIColor colorWithRed:220.f/255.f green:220.f/255.f blue:222.f/255.f alpha:1.f];
         [self addSubview:topHline];
@@ -22,20 +26,34 @@
         bottomHline.backgroundColor = [UIColor colorWithRed:220.f/255.f green:220.f/255.f blue:222.f/255.f alpha:1.f];
         [self addSubview:bottomHline];
         
-        CGFloat space = 10.f;
-        CGSize btnSize = CGSizeMake(self.frame.size.height-10.f, self.frame.size.height-space);
-        CGFloat pbx = self.frame.size.width-btnSize.width-10.f;
+        CGFloat space = 6.f;
+        CGSize btnSize = CGSizeMake(self.frame.size.height-space, self.frame.size.height-space);
+        CGFloat pbx = self.frame.size.width-btnSize.width-space;
         CGFloat pby = space/2;
         UIButton *plusBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
         plusBtn.frame = CGRectMake(pbx, pby, btnSize.width, btnSize.height);
         plusBtn.tintColor = [UIColor darkGrayColor];
-        [self addSubview:plusBtn];
+        //[self addSubview:plusBtn];
         
-        UIScrollView *funcScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, pbx, self.frame.size.height)];
+        UIScrollView *funcScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         funcScrollView.backgroundColor = [UIColor clearColor];
         [self addSubview:funcScrollView];
         
-        NSArray *funcBtnArray = @[@"a", @"i", @"u", @"c", @"b", @"w", @"i", @"u", @"c", @"b", @"w"];
+        NSArray *funcBtnArray = nil;
+        if (funcIconArr) {
+            funcBtnArray = funcIconArr;
+        }else{
+            funcBtnArray = @[@"a",
+                             @"i",
+                             @"u",
+                             @"a",
+                             @"i",
+                             @"u",
+                             @"c",
+                             @"b",
+                             @"w"];
+        }
+        
         CGFloat funcBtnWidth = btnSize.width + 10.f;
         
         [funcScrollView setContentSize:CGSizeMake(funcBtnArray.count * funcBtnWidth, self.frame.size.height)];
@@ -43,8 +61,11 @@
         UIButton *funcBtn = nil;
         for (NSInteger i = 0; i < [funcBtnArray count]; i++) {
             funcBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            funcBtn.frame = CGRectMake(10.f * (i+1) + i * btnSize.width, pby, btnSize.width, btnSize.height);
+            funcBtn.frame = CGRectMake(5.f +10.f * i + i * btnSize.width, pby, btnSize.width, btnSize.height);
             [funcBtn setImage:[UIImage imageNamed:funcBtnArray[i]] forState:UIControlStateNormal];
+            funcBtn.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+            funcBtn.layer.borderWidth = 1.f;
+            funcBtn.layer.cornerRadius = 5.f;
             [funcScrollView addSubview:funcBtn];
         }
     }
