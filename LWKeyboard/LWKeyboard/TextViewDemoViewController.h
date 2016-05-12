@@ -1,5 +1,5 @@
 //
-//  LWKeyboardView.h
+//  TextViewDemoViewController.h
 //  LWKeyboard
 //
 //  Created by liwei on 16/5/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LWKeyboardView : UIView
-
-- (void)setupTextSetView;
+@interface TextViewDemoViewController : UIViewController
 
 @end

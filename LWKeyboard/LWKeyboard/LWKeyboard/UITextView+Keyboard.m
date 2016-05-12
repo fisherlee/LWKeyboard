@@ -1,15 +1,13 @@
 //
-//  LWKeyboardView.h
+//  UITextView+Keyboard.m
 //  LWKeyboard
 //
 //  Created by liwei on 16/5/12.
 //  Copyright © 2016年 liwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "UITextView+Keyboard.h"
 
-@interface LWKeyboardView : UIView
-
-- (void)setupTextSetView;
+@implementation UITextView (Keyboard)
 
 @end

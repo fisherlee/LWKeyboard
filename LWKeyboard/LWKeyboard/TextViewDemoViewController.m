@@ -1,34 +1,29 @@
 //
-//  ViewController.m
+//  TextViewDemoViewController.m
 //  LWKeyboard
 //
-//  Created by liwei on 16/5/11.
+//  Created by liwei on 16/5/12.
 //  Copyright © 2016年 liwei. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TextViewDemoViewController.h"
 #import "UIViewController+Keyboard.h"
 
-#import "TextViewDemoViewController.h"
+@interface TextViewDemoViewController ()
 
-@interface ViewController ()
 
 @property (nonatomic, strong) UITextView *textView;
 
-@property (nonatomic, strong) TextViewDemoViewController *demoController;
 
 @end
 
-@implementation ViewController
+@implementation TextViewDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"有bar" style:UIBarButtonItemStyleDone target:self action:@selector(rightBtnItemAction)];
-    self.navigationItem.rightBarButtonItem = rightButtonItem;
-    
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
@@ -44,9 +39,7 @@
 {
     [super viewWillAppear:YES];
     
-    [self setupTextViewKeyboardBar:YES];
-    
-    _demoController = nil;
+    [self setupTextViewKeyboardBar:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -58,17 +51,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ 
 }
-
-- (void)rightBtnItemAction
-{
-    if (_demoController == nil) {
-        _demoController = [[TextViewDemoViewController alloc] init];
-        [self.navigationController pushViewController:_demoController animated:YES];
-    }
-}
-
-
 
 @end

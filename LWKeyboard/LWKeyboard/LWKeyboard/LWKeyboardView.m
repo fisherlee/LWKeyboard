@@ -2,7 +2,7 @@
 //  LWKeyboardView.m
 //  LWKeyboard
 //
-//  Created by liwei on 16/5/11.
+//  Created by liwei on 16/5/12.
 //  Copyright © 2016年 liwei. All rights reserved.
 //
 
@@ -14,41 +14,46 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIView *topHline = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 1.f)];
-        topHline.backgroundColor = [UIColor colorWithRed:220.f/255.f green:220.f/255.f blue:222.f/255.f alpha:1.f];
-        [self addSubview:topHline];
-        
-        UIView *bottomHline = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-1.f, self.frame.size.width, 1.f)];
-        bottomHline.backgroundColor = [UIColor colorWithRed:220.f/255.f green:220.f/255.f blue:222.f/255.f alpha:1.f];
-        [self addSubview:bottomHline];
-        
-        CGFloat space = 10.f;
-        CGSize btnSize = CGSizeMake(self.frame.size.height-10.f, self.frame.size.height-space);
-        CGFloat pbx = self.frame.size.width-btnSize.width-10.f;
-        CGFloat pby = space/2;
-        UIButton *plusBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
-        plusBtn.frame = CGRectMake(pbx, pby, btnSize.width, btnSize.height);
-        plusBtn.tintColor = [UIColor darkGrayColor];
-        [self addSubview:plusBtn];
-        
-        UIScrollView *funcScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, pbx, self.frame.size.height)];
-        funcScrollView.backgroundColor = [UIColor clearColor];
-        [self addSubview:funcScrollView];
-        
-        NSArray *funcBtnArray = @[@"a", @"i", @"u", @"c", @"b", @"w", @"i", @"u", @"c", @"b", @"w"];
-        CGFloat funcBtnWidth = btnSize.width + 10.f;
-        
-        [funcScrollView setContentSize:CGSizeMake(funcBtnArray.count * funcBtnWidth, self.frame.size.height)];
-        
-        UIButton *funcBtn = nil;
-        for (NSInteger i = 0; i < [funcBtnArray count]; i++) {
-            funcBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            funcBtn.frame = CGRectMake(10.f * (i+1) + i * btnSize.width, pby, btnSize.width, btnSize.height);
-            [funcBtn setImage:[UIImage imageNamed:funcBtnArray[i]] forState:UIControlStateNormal];
-            [funcScrollView addSubview:funcBtn];
-        }
+        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
+}
+
+- (void)setupTextSetView
+{
+    CGSize btnSize = CGSizeMake(50, 80);
+    
+    
+    NSArray *btnArray = @[@{@"字体":@"a"}, @{@"斜体":@"i"}, @{@"下划线":@"u"}];
+    
+    
+    UIButton *btn = nil;
+    for (NSInteger i = 0; i < [btnArray count]; i++) {
+        btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(5.f + 10.f * i + i * btnSize.width, 5.f, btnSize.width, btnSize.height);
+        [self addSubview:btn];
+        
+        NSDictionary *dict = btnArray[i];
+        NSArray *keyArr = [dict allKeys];
+        NSArray *valueArr = [dict allValues];
+        
+        UIImageView *iconImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:valueArr[0]]];
+        iconImg.frame = CGRectMake(0, 0, btnSize.width, btnSize.width);
+        iconImg.backgroundColor = [UIColor clearColor];
+        iconImg.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        iconImg.layer.borderWidth = 1.f;
+        iconImg.layer.cornerRadius = 5.f;
+        [btn addSubview:iconImg];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, btnSize.width, btnSize.width, btnSize.height - btnSize.width)];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.adjustsFontSizeToFitWidth = YES;
+        titleLabel.font = [UIFont systemFontOfSize:14.f];
+        titleLabel.textColor = [UIColor lightGrayColor];
+        titleLabel.text = keyArr[0];
+        [btn addSubview:titleLabel];
+    }
 }
 
 @end

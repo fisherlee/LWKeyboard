@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D02FEA311CE45FE3000B652F /* UIView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FEA301CE45FE3000B652F /* UIView+Keyboard.m */; };
+		D02FEA341CE460C8000B652F /* UITextView+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FEA331CE460C8000B652F /* UITextView+Keyboard.m */; };
+		D02FEA371CE461A1000B652F /* TextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FEA361CE461A1000B652F /* TextViewDemoViewController.m */; };
+		D02FEA3A1CE464CB000B652F /* UIViewController+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FEA391CE464CB000B652F /* UIViewController+Keyboard.m */; };
+		D02FEA3D1CE471BD000B652F /* keyboard_close_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA3B1CE471BD000B652F /* keyboard_close_icon@2x.png */; };
+		D02FEA3E1CE471BD000B652F /* keyboard_close_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA3C1CE471BD000B652F /* keyboard_close_icon@3x.png */; };
+		D02FEA431CE4738C000B652F /* d.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA3F1CE4738C000B652F /* d.png */; };
+		D02FEA441CE4738C000B652F /* e.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA401CE4738C000B652F /* e.png */; };
+		D02FEA451CE4738C000B652F /* f.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA411CE4738C000B652F /* f.png */; };
+		D02FEA461CE4738C000B652F /* g.png in Resources */ = {isa = PBXBuildFile; fileRef = D02FEA421CE4738C000B652F /* g.png */; };
+		D02FEA491CE47607000B652F /* LWKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FEA481CE47607000B652F /* LWKeyboardView.m */; };
 		D0AF660A1CE30183009EAC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF66091CE30183009EAC28 /* main.m */; };
 		D0AF660D1CE30183009EAC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF660C1CE30183009EAC28 /* AppDelegate.m */; };
 		D0AF66101CE30183009EAC28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF660F1CE30183009EAC28 /* ViewController.m */; };
 		D0AF66131CE30183009EAC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66111CE30183009EAC28 /* Main.storyboard */; };
 		D0AF66151CE30183009EAC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66141CE30183009EAC28 /* Assets.xcassets */; };
 		D0AF66181CE30183009EAC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66161CE30183009EAC28 /* LaunchScreen.storyboard */; };
-		D0AF66221CE30B7A009EAC28 /* LWKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF66211CE30B7A009EAC28 /* LWKeyboardView.m */; };
+		D0AF66221CE30B7A009EAC28 /* LWKeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AF66211CE30B7A009EAC28 /* LWKeyboardBar.m */; };
 		D0AF66271CE32A50009EAC28 /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66241CE32A50009EAC28 /* a.png */; };
 		D0AF66281CE32A50009EAC28 /* i.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66251CE32A50009EAC28 /* i.png */; };
 		D0AF66291CE32A50009EAC28 /* u.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AF66261CE32A50009EAC28 /* u.png */; };
@@ -23,6 +34,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D02FEA2F1CE45FE3000B652F /* UIView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Keyboard.h"; sourceTree = "<group>"; };
+		D02FEA301CE45FE3000B652F /* UIView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Keyboard.m"; sourceTree = "<group>"; };
+		D02FEA321CE460C8000B652F /* UITextView+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Keyboard.h"; sourceTree = "<group>"; };
+		D02FEA331CE460C8000B652F /* UITextView+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Keyboard.m"; sourceTree = "<group>"; };
+		D02FEA351CE461A1000B652F /* TextViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDemoViewController.h; sourceTree = "<group>"; };
+		D02FEA361CE461A1000B652F /* TextViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDemoViewController.m; sourceTree = "<group>"; };
+		D02FEA381CE464CB000B652F /* UIViewController+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Keyboard.h"; sourceTree = "<group>"; };
+		D02FEA391CE464CB000B652F /* UIViewController+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Keyboard.m"; sourceTree = "<group>"; };
+		D02FEA3B1CE471BD000B652F /* keyboard_close_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_close_icon@2x.png"; sourceTree = "<group>"; };
+		D02FEA3C1CE471BD000B652F /* keyboard_close_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_close_icon@3x.png"; sourceTree = "<group>"; };
+		D02FEA3F1CE4738C000B652F /* d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = d.png; sourceTree = "<group>"; };
+		D02FEA401CE4738C000B652F /* e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e.png; sourceTree = "<group>"; };
+		D02FEA411CE4738C000B652F /* f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f.png; sourceTree = "<group>"; };
+		D02FEA421CE4738C000B652F /* g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g.png; sourceTree = "<group>"; };
+		D02FEA471CE47607000B652F /* LWKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardView.h; sourceTree = "<group>"; };
+		D02FEA481CE47607000B652F /* LWKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardView.m; sourceTree = "<group>"; };
 		D0AF66051CE30183009EAC28 /* LWKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AF66091CE30183009EAC28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0AF660B1CE30183009EAC28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,8 +60,8 @@
 		D0AF66141CE30183009EAC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0AF66171CE30183009EAC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0AF66191CE30183009EAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0AF66201CE30B7A009EAC28 /* LWKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardView.h; sourceTree = "<group>"; };
-		D0AF66211CE30B7A009EAC28 /* LWKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardView.m; sourceTree = "<group>"; };
+		D0AF66201CE30B7A009EAC28 /* LWKeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWKeyboardBar.h; sourceTree = "<group>"; };
+		D0AF66211CE30B7A009EAC28 /* LWKeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWKeyboardBar.m; sourceTree = "<group>"; };
 		D0AF66241CE32A50009EAC28 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		D0AF66251CE32A50009EAC28 /* i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i.png; sourceTree = "<group>"; };
 		D0AF66261CE32A50009EAC28 /* u.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u.png; sourceTree = "<group>"; };
@@ -78,6 +105,8 @@
 				D0AF660C1CE30183009EAC28 /* AppDelegate.m */,
 				D0AF660E1CE30183009EAC28 /* ViewController.h */,
 				D0AF660F1CE30183009EAC28 /* ViewController.m */,
+				D02FEA351CE461A1000B652F /* TextViewDemoViewController.h */,
+				D02FEA361CE461A1000B652F /* TextViewDemoViewController.m */,
 				D0AF66111CE30183009EAC28 /* Main.storyboard */,
 				D0AF66141CE30183009EAC28 /* Assets.xcassets */,
 				D0AF66161CE30183009EAC28 /* LaunchScreen.storyboard */,
@@ -98,9 +127,17 @@
 		D0AF661F1CE30B6F009EAC28 /* LWKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D0AF66201CE30B7A009EAC28 /* LWKeyboardBar.h */,
+				D0AF66211CE30B7A009EAC28 /* LWKeyboardBar.m */,
+				D02FEA471CE47607000B652F /* LWKeyboardView.h */,
+				D02FEA481CE47607000B652F /* LWKeyboardView.m */,
+				D02FEA2F1CE45FE3000B652F /* UIView+Keyboard.h */,
+				D02FEA301CE45FE3000B652F /* UIView+Keyboard.m */,
+				D02FEA321CE460C8000B652F /* UITextView+Keyboard.h */,
+				D02FEA331CE460C8000B652F /* UITextView+Keyboard.m */,
+				D02FEA381CE464CB000B652F /* UIViewController+Keyboard.h */,
+				D02FEA391CE464CB000B652F /* UIViewController+Keyboard.m */,
 				D0AF66231CE316D7009EAC28 /* lwkbImages */,
-				D0AF66201CE30B7A009EAC28 /* LWKeyboardView.h */,
-				D0AF66211CE30B7A009EAC28 /* LWKeyboardView.m */,
 			);
 			path = LWKeyboard;
 			sourceTree = "<group>";
@@ -108,6 +145,12 @@
 		D0AF66231CE316D7009EAC28 /* lwkbImages */ = {
 			isa = PBXGroup;
 			children = (
+				D02FEA3B1CE471BD000B652F /* keyboard_close_icon@2x.png */,
+				D02FEA3C1CE471BD000B652F /* keyboard_close_icon@3x.png */,
+				D02FEA3F1CE4738C000B652F /* d.png */,
+				D02FEA401CE4738C000B652F /* e.png */,
+				D02FEA411CE4738C000B652F /* f.png */,
+				D02FEA421CE4738C000B652F /* g.png */,
 				D0AF662A1CE32C2F009EAC28 /* b.png */,
 				D0AF662B1CE32C2F009EAC28 /* c.png */,
 				D0AF662C1CE32C2F009EAC28 /* w.png */,
@@ -175,9 +218,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02FEA431CE4738C000B652F /* d.png in Resources */,
 				D0AF66181CE30183009EAC28 /* LaunchScreen.storyboard in Resources */,
 				D0AF66271CE32A50009EAC28 /* a.png in Resources */,
 				D0AF66281CE32A50009EAC28 /* i.png in Resources */,
+				D02FEA451CE4738C000B652F /* f.png in Resources */,
+				D02FEA3E1CE471BD000B652F /* keyboard_close_icon@3x.png in Resources */,
+				D02FEA461CE4738C000B652F /* g.png in Resources */,
+				D02FEA441CE4738C000B652F /* e.png in Resources */,
+				D02FEA3D1CE471BD000B652F /* keyboard_close_icon@2x.png in Resources */,
 				D0AF662E1CE32C2F009EAC28 /* c.png in Resources */,
 				D0AF66291CE32A50009EAC28 /* u.png in Resources */,
 				D0AF66151CE30183009EAC28 /* Assets.xcassets in Resources */,
@@ -195,9 +244,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0AF66101CE30183009EAC28 /* ViewController.m in Sources */,
+				D02FEA371CE461A1000B652F /* TextViewDemoViewController.m in Sources */,
+				D02FEA311CE45FE3000B652F /* UIView+Keyboard.m in Sources */,
+				D02FEA341CE460C8000B652F /* UITextView+Keyboard.m in Sources */,
 				D0AF660D1CE30183009EAC28 /* AppDelegate.m in Sources */,
-				D0AF66221CE30B7A009EAC28 /* LWKeyboardView.m in Sources */,
+				D0AF66221CE30B7A009EAC28 /* LWKeyboardBar.m in Sources */,
 				D0AF660A1CE30183009EAC28 /* main.m in Sources */,
+				D02FEA491CE47607000B652F /* LWKeyboardView.m in Sources */,
+				D02FEA3A1CE464CB000B652F /* UIViewController+Keyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +402,7 @@
 				D0AF661E1CE30183009EAC28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
