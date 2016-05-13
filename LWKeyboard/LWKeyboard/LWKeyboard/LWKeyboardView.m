@@ -22,6 +22,7 @@
     for (NSInteger i = 0; i < [btnArray count]; i++) {
         btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(5.f + 10.f * i + i * btnSize.width, 5.f, btnSize.width, btnSize.height);
+        
         [self addSubview:btn];
         
         NSDictionary *dict = btnArray[i];
