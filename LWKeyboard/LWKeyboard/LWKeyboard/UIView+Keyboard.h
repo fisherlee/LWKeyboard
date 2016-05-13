@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class LWKeyboardBar;
 @interface UIView (Keyboard)
+
+- (void)setupTextViewKeyboardBar:(BOOL)hidden;
+- (void)removeKeyboardBar;
 
 @end
