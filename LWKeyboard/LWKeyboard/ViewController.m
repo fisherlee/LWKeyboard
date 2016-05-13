@@ -40,6 +40,11 @@
     [self.view addSubview:_textView];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
@@ -54,11 +59,6 @@
     [super viewWillDisappear:YES];
     
     [self removeKeyboardBar];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)rightBtnItemAction

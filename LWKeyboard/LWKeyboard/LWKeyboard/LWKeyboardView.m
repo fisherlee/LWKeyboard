@@ -10,15 +10,6 @@
 
 @implementation LWKeyboardView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
-    }
-    return self;
-}
-
 - (void)setupTextSetView
 {
     CGSize btnSize = CGSizeMake(50, 80);
