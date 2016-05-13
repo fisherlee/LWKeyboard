@@ -231,10 +231,15 @@
     keyboardView.backgroundColor = bgColor;
     [window addSubview:keyboardView];
     
+    if (tag == 4) {
+        [keyboardView setupImagesView];
+    }
     if (tag == 5) {
         [keyboardView setupTextSetView];
     }
-
+    if (tag == 6) {
+        [keyboardView setupCamera];
+    }
 }
 
 @end

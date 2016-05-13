@@ -10,13 +10,54 @@
 
 @implementation LWKeyboardView
 
+- (void)setupCamera
+{
+    NSArray *btnArray = @[@{@"相机":@"camera_icon"}, @{@"相册":@"pictures_icon"}];
+    [self displayButtonView:btnArray];
+}
+
+- (void)setupImagesView
+{
+    self.backgroundColor = [UIColor colorWithRed:244.f/255.f green:245.f/255.f blue:249.f/255.f alpha:1.f];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+    scrollView.backgroundColor = [UIColor clearColor];
+    [self addSubview:scrollView];
+    
+    CGSize imgSize = CGSizeMake((self.frame.size.height - 10.f)*0.6, self.frame.size.height - 10.f);
+    
+    NSMutableArray *marr = [[NSMutableArray alloc] init];
+    for (NSInteger i=0; i<15; i++) {
+        if (i<10) {
+           [marr addObject:[NSString stringWithFormat:@"10%@.jpg",@(i)]];
+        }else {
+            [marr addObject:[NSString stringWithFormat:@"1%@.jpg",@(i)]];
+        }
+    }
+    NSArray *imgArr = [NSArray arrayWithArray:marr];
+
+    [scrollView setContentSize:CGSizeMake((imgSize.width+6.f)*imgArr.count, self.frame.size.height)];
+    
+    UIImageView *imageView = nil;
+    for (NSInteger i = 0; i < imgArr.count; i++) {
+        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imgArr[i]]];
+        imageView.frame = CGRectMake(5.f+5.f*i+i*imgSize.width, 5.f, imgSize.width, imgSize.height);
+        [scrollView addSubview:imageView];
+    }
+}
+
 - (void)setupTextSetView
 {
-    CGSize btnSize = CGSizeMake(50, 80);
-    
-    
     NSArray *btnArray = @[@{@"字体":@"a"}, @{@"斜体":@"i"}, @{@"下划线":@"u"}];
+    [self displayButtonView:btnArray];
+}
+
+#pragma mark --- custom
+- (void)displayButtonView:(NSArray *)btnArray
+{
+    self.backgroundColor = [UIColor colorWithRed:244.f/255.f green:245.f/255.f blue:249.f/255.f alpha:1.f];
     
+    CGSize btnSize = CGSizeMake(50, 80);
     
     UIButton *btn = nil;
     for (NSInteger i = 0; i < [btnArray count]; i++) {
@@ -42,10 +83,11 @@
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.adjustsFontSizeToFitWidth = YES;
         titleLabel.font = [UIFont systemFontOfSize:14.f];
-        titleLabel.textColor = [UIColor lightGrayColor];
+        titleLabel.textColor = [UIColor darkGrayColor];
         titleLabel.text = keyArr[0];
         [btn addSubview:titleLabel];
     }
+
 }
 
 @end

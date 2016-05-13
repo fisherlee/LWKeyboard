@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface LWKeyboardView : UIView
+@interface LWKeyboardView : UIView<UIActionSheetDelegate>
+
+- (void)setupCamera;
+- (void)setupImagesView;
 
 - (void)setupTextSetView;
 

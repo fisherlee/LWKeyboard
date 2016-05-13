@@ -10,7 +10,5 @@
 
 @interface UIView (Keyboard)
 
-- (void)setupTextViewKeyboardBar:(BOOL)hidden;
-- (void)removeKeyboardBar;
 
 @end
